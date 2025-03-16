@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sevak - Connect with Local Service Professionals</title>
+    <meta name="description" content="Find trusted local service professionals for home, business, and personal needs. Sevak connects you with verified experts near you." />
+    <meta name="author" content="Sevak" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="home.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/" class="logo">Sevak</a>
+        </div>
+
+        <div class="navbar-menu" id="navbarMenu">
+          <a href="#services" class="navbar-item">Services</a>
+          <a href="#how-it-works" class="navbar-item">How It Works</a>
+          <a href="#professionals" class="navbar-item">Professionals</a>
+          <a href="#testimonials" class="navbar-item">Review</a>
+        </div>
+
+        <div class="navbar-buttons">
+          <button class="btn btn-outline" onclick="location.href='login.html'" >Log In</button>
+          <button class="btn btn-primary" onclick="location.href='register.html'">Sign Up</button>
+        </div>
+
+        <div class="navbar-toggle" id="navbarToggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Find Trusted Local Service Professionals</h1>
+        <p class="hero-subtitle">Connect with skilled professionals near you for all your home, business, and personal service needs.</p>
+        
+        <div class="search-box">
+          <div class="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="What service do you need?">
+          </div>
+          <div class="search-input">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Your location">
+          </div>
+          <button class="btn btn-primary">Search</button>
+        </div>
+
+        <div class="popular-services">
+          <p>Popular services:</p>
+          <div class="service-tags">
+            <button class="btn btn-tag">Home Cleaning</button>
+            <button class="btn btn-tag">Plumbing</button>
+            <button class="btn btn-tag">Electrician</button>
+            <button class="btn btn-tag">Lawn Care</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>Discover a wide range of services provided by verified professionals in your area.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+            <h3>Home Repair</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+            <h3>Plumbing</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+            <h3>Painting</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Business</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+            <h3>Auto Service</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h3>Catering</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-pencil"></i></div>
+            <h3>Design</h3>
+            <p>Find trusted professionals</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-scissors"></i></div>
+            <h3>Beauty & Salon</h3>
+            <p>Find trusted professionals</p>
+          </div>
+        </div>
+
+        <div class="services-view-all">
+          <button class="btn-text">View All Services <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How Sevak Works</h2>
+          <p>Finding and booking professional services has never been easier. Follow these simple steps to get started.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Search Services</h3>
+            <p>Browse through our extensive catalog of professional services available in your area.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+            <h3>Choose a Professional</h3>
+            <p>Select from a list of qualified and verified service providers based on reviews and ratings.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <i class="fa-solid fa-calendar"></i>
+            </div>
+            <h3>Book an Appointment</h3>
+            <p>Schedule a convenient time for the service directly through our easy-to-use platform.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Rate & Review</h3>
+            <p>Share your experience and help others find reliable professionals in the community.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section id="professionals" class="professionals">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet Our Top Professionals</h2>
+          <p>Our platform hosts thousands of skilled professionals who are ready to help you with your service needs.</p>
+        </div>
+
+        <div class="professionals-grid">
+          <div class="professional-card">
+            <div class="professional-image">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Rajesh Kumar">
+              <div class="professional-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+                <span class="reviews">(127 reviews)</span>
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3>Rajesh Kumar</h3>
+              <p class="profession">Electrician</p>
+              <p class="location"><i class="fa-solid fa-location-dot"></i> Mumbai, Maharashtra</p>
+              <div class="professional-actions">
+                <button class="btn btn-outline-small"><i class="fa-solid fa-phone"></i> Call</button>
+                <button class="btn btn-primary-small"><i class="fa-solid fa-envelope"></i> Message</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="professional-card">
+            <div class="professional-image">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Priya Sharma">
+              <div class="professional-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+                <span class="reviews">(94 reviews)</span>
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3>Priya Sharma</h3>
+              <p class="profession">Interior Designer</p>
+              <p class="location"><i class="fa-solid fa-location-dot"></i> Bangalore, Karnataka</p>
+              <div class="professional-actions">
+                <button class="btn btn-outline-small"><i class="fa-solid fa-phone"></i> Call</button>
+                <button class="btn btn-primary-small"><i class="fa-solid fa-envelope"></i> Message</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="professional-card">
+            <div class="professional-image">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Amit Patel">
+              <div class="professional-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+                <span class="reviews">(68 reviews)</span>
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3>Amit Patel</h3>
+              <p class="profession">Plumber</p>
+              <p class="location"><i class="fa-solid fa-location-dot"></i> Delhi, NCR</p>
+              <div class="professional-actions">
+                <button class="btn btn-outline-small"><i class="fa-solid fa-phone"></i> Call</button>
+                <button class="btn btn-primary-small"><i class="fa-solid fa-envelope"></i> Message</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="professional-card">
+            <div class="professional-image">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Neha Gupta">
+              <div class="professional-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+                <span class="reviews">(152 reviews)</span>
+              </div>
+            </div>
+            <div class="professional-info">
+              <h3>Neha Gupta</h3>
+              <p class="profession">House Cleaner</p>
+              <p class="location"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana</p>
+              <div class="professional-actions">
+                <button class="btn btn-outline-small"><i class="fa-solid fa-phone"></i> Call</button>
+                <button class="btn btn-primary-small"><i class="fa-solid fa-envelope"></i> Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="professionals-view-all">
+          <button class="btn btn-primary">View All Professionals</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+          <p>Don't just take our word for it. Here's what customers have to say about their experiences with Sevak.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-content">"I needed an urgent plumbing repair and found a professional through Sevak within minutes. The service was excellent and the price was reasonable. Will definitely use Sevak again!"</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Ananya Desai">
+              <div>
+                <h4>Ananya Desai</h4>
+                <p>Homeowner</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-content">"As a small business owner, I rely on Sevak to find reliable professionals for various services. The platform has saved me countless hours and connected me with top-notch service providers."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Vikram Malhotra">
+              <div>
+                <h4>Vikram Malhotra</h4>
+                <p>Business Owner</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="testimonial-content">"I've used Sevak for everything from house cleaning to furniture assembly. The ability to see reviews and choose professionals based on their ratings has ensured I always get quality service."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Meera Joshi">
+              <div>
+                <h4>Meera Joshi</h4>
+                <p>Apartment Resident</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of satisfied customers and professionals on Sevak. Whether you need a service or want to offer your skills, we've got you covered.</p>
+        
+        <div class="cta-buttons">
+          <button class="btn btn-light">Find a Service</button>
+          <button class="btn btn-outline-light">Become a Professional <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+        <div class="cta-stats">
+          <div class="stat">
+            <h3>10,000+</h3>
+            <p>Active Professionals</p>
+          </div>
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Service Categories</p>
+          </div>
+          <div class="stat">
+            <h3>100,000+</h3>
+            <p>Satisfied Customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>Sevak</h3>
+            <p>Connecting customers with trusted service professionals since 2023. Your one-stop platform for all service needs.</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Home Repair</a></li>
+              <li><a href="#">Plumbing</a></li>
+              <li><a href="#">Electrical</a></li>
+              <li><a href="#">Cleaning</a></li>
+              <li><a href="#">View All Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Join as Professional</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i> 123 Service Lane, Techno Park,<br>Mumbai, 400001, India</li>
+              <li><i class="fa-solid fa-phone"></i> +91 123-456-7890</li>
+              <li><i class="fa-solid fa-envelope"></i> support@sevak.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 Sevak. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

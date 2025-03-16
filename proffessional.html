@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Dashboard | Sevak</title>
+    <link rel="stylesheet" href="proffessional.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="logo">Sevak</a>
+            <div class="navbar-toggle" id="navbarToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="home.html" class="navbar-item">Home</a></li>
+                <li><a href="home.html#services" class="navbar-item">Services</a></li>
+                <li><a href="home.html#how-it-works" class="navbar-item">How It Works</a></li>
+                <li><a href="home.html#professionals" class="navbar-item">Professionals</a></li>
+                <li><a href="home.html#testimonials" class="navbar-item">Review</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a href="professional-dashboard.html" class="btn btn-primary">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Professional Dashboard -->
+    <section class="professional-dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="professional-info">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Professional" class="profile-image">
+                    <div>
+                        <h2>Rajesh Kumar</h2>
+                        <p class="profession">Electrician</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+                    </div>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="btn btn-outline"><i class="fas fa-cog"></i> Settings</button>
+                    <button class="btn btn-primary" onclick="location.href='editprofile.html'"><i class="fas fa-user-edit"></i> Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-content">
+                        <h3>24</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-rupee-sign"></i></div>
+                    <div class="stat-content">
+                        <h3>₹12,500</h3>
+                        <p>Total Earnings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-content">
+                        <h3>4.8</h3>
+                        <p>Rating</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-content">
+                        <h3>127</h3>
+                        <p>Clients Served</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-tabs">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="bookings">Booking Status</button>
+                    <button class="tab-btn" data-tab="payments">Payments</button>
+                    <button class="tab-btn" data-tab="schedule">Schedule</button>
+                    <button class="tab-btn" data-tab="requests">Work Requests</button>
+                </div>
+
+                <div class="tab-content active" id="bookings">
+                    <div class="content-header">
+                        <h3>Recent Bookings</h3>
+                        <div class="filter">
+                            <select>
+                                <option>All Statuses</option>
+                                <option>Completed</option>
+                                <option>Upcoming</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-list">
+                        <div class="booking-card">
+                            <div class="booking-info">
+                                <h4>Electrical Wiring</h4>
+                                <p class="booking-client"><i class="fas fa-user"></i> Amit Sharma</p>
+                                <p class="booking-address"><i class="fas fa-map-marker-alt"></i> 42 Park Road, Juhu, Mumbai</p>
+                                <p class="booking-time"><i class="fas fa-clock"></i> Today, 2:00 PM - 4:00 PM</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status upcoming">Upcoming</span>
+                                <div class="booking-actions">
+                                    <button class="btn-text"><i class="fas fa-phone"></i> Call</button>
+                                    <button class="btn-text"><i class="fas fa-envelope"></i> Message</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-card">
+                            <div class="booking-info">
+                                <h4>Fan Installation</h4>
+                                <p class="booking-client"><i class="fas fa-user"></i> Priya Patel</p>
+                                <p class="booking-address"><i class="fas fa-map-marker-alt"></i> 78 Green Avenue, Bandra, Mumbai</p>
+                                <p class="booking-time"><i class="fas fa-clock"></i> Yesterday, 11:00 AM - 12:30 PM</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status completed">Completed</span>
+                                <p class="payment-info">Payment: ₹1,200 (Received)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="booking-card">
+                            <div class="booking-info">
+                                <h4>Switch Board Repair</h4>
+                                <p class="booking-client"><i class="fas fa-user"></i> Rahul Mehta</p>
+                                <p class="booking-address"><i class="fas fa-map-marker-alt"></i> 15 Sea View Apartments, Worli, Mumbai</p>
+                                <p class="booking-time"><i class="fas fa-clock"></i> 15 May, 4:00 PM - 5:30 PM</p>
+                            </div>
+                            <div class="booking-status">
+                                <span class="status cancelled">Cancelled</span>
+                                <p class="cancellation-reason">Reason: Client rescheduled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="payments">
+                    <div class="content-header">
+                        <h3>Payment History</h3>
+                        <div class="filter">
+                            <select>
+                                <option>Last 30 days</option>
+                                <option>This Month</option>
+                                <option>Last Month</option>
+                                <option>All Time</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-stats">
+                        <div class="payment-stat">
+                            <h4>₹4,500</h4>
+                            <p>This Month</p>
+                        </div>
+                        <div class="payment-stat">
+                            <h4>₹12,500</h4>
+                            <p>Total Earned</p>
+                        </div>
+                        <div class="payment-stat">
+                            <h4>₹1,200</h4>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-list">
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <h4>Fan Installation</h4>
+                                <p><i class="fas fa-user"></i> Priya Patel</p>
+                                <p><i class="fas fa-calendar"></i> May 18, 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹1,200</h4>
+                                <span class="status completed">Paid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <h4>Electrical Repairs</h4>
+                                <p><i class="fas fa-user"></i> Vikram Singh</p>
+                                <p><i class="fas fa-calendar"></i> May 15, 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹900</h4>
+                                <span class="status completed">Paid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <h4>Wiring Installation</h4>
+                                <p><i class="fas fa-user"></i> Neha Gupta</p>
+                                <p><i class="fas fa-calendar"></i> May 10, 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹2,400</h4>
+                                <span class="status completed">Paid</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-info">
+                                <h4>Emergency Repairs</h4>
+                                <p><i class="fas fa-user"></i> Arjun Kapoor</p>
+                                <p><i class="fas fa-calendar"></i> May 5, 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹1,800</h4>
+                                <span class="status pending">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="schedule">
+                    <div class="content-header">
+                        <h3>Weekly Schedule</h3>
+                        <div class="week-navigator">
+                            <button class="btn-text"><i class="fas fa-chevron-left"></i> Previous</button>
+                            <h4>May 15 - May 21, 2023</h4>
+                            <button class="btn-text">Next <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-calendar">
+                        <div class="calendar-header">
+                            <div>Monday</div>
+                            <div>Tuesday</div>
+                            <div>Wednesday</div>
+                            <div>Thursday</div>
+                            <div>Friday</div>
+                            <div>Saturday</div>
+                            <div>Sunday</div>
+                        </div>
+                        
+                        <div class="calendar-body">
+                            <div class="calendar-day">
+                                <div class="day-number">15</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">9:00 AM - 11:00 AM</div>
+                                        <div class="event-title">Electrical Repairs</div>
+                                        <div class="event-location">Worli</div>
+                                    </div>
+                                    <div class="event">
+                                        <div class="event-time">2:00 PM - 4:00 PM</div>
+                                        <div class="event-title">Fan Installation</div>
+                                        <div class="event-location">Bandra</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="day-number">16</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">10:00 AM - 12:00 PM</div>
+                                        <div class="event-title">Wiring Setup</div>
+                                        <div class="event-location">Andheri</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="day-number">17</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">3:00 PM - 5:00 PM</div>
+                                        <div class="event-title">Emergency Call</div>
+                                        <div class="event-location">Juhu</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="day-number">18</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">9:00 AM - 11:00 AM</div>
+                                        <div class="event-title">Switch Installation</div>
+                                        <div class="event-location">Dadar</div>
+                                    </div>
+                                    <div class="event">
+                                        <div class="event-time">1:00 PM - 3:00 PM</div>
+                                        <div class="event-title">Fan Repair</div>
+                                        <div class="event-location">Colaba</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day today">
+                                <div class="day-number">19</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">2:00 PM - 4:00 PM</div>
+                                        <div class="event-title">Electrical Wiring</div>
+                                        <div class="event-location">Juhu</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="day-number">20</div>
+                                <div class="day-events">
+                                    <div class="event">
+                                        <div class="event-time">11:00 AM - 1:00 PM</div>
+                                        <div class="event-title">Home Inspection</div>
+                                        <div class="event-location">Powai</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-day">
+                                <div class="day-number">21</div>
+                                <div class="day-events">
+                                    <div class="event off-day">Day Off</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="availability-settings">
+                        <h4>Your Availability</h4>
+                        <div class="availability-toggles">
+                            <div class="availability-day">
+                                <span>Monday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Tuesday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Wednesday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Thursday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Friday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Saturday</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="availability-day">
+                                <span>Sunday</span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Update Availability</button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="requests">
+                    <div class="content-header">
+                        <h3>New Work Requests</h3>
+                        <button class="btn btn-outline">View History</button>
+                    </div>
+                    
+                    <div class="work-requests">
+                        <div class="request-card">
+                            <div class="request-info">
+                                <h4>Electrical Wiring Installation</h4>
+                                <p class="request-client"><i class="fas fa-user"></i> Karan Mehta</p>
+                                <p class="request-address"><i class="fas fa-map-marker-alt"></i> 27 Sunrise Apartments, Powai, Mumbai</p>
+                                <p class="request-time"><i class="fas fa-clock"></i> May 22, 10:00 AM - 1:00 PM</p>
+                                <p class="request-details"><i class="fas fa-info-circle"></i> Need complete rewiring for 2BHK apartment. Urgent work.</p>
+                                <p class="request-budget"><i class="fas fa-rupee-sign"></i> Budget: ₹3,500 - ₹4,500</p>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn btn-outline">Decline</button>
+                                <button class="btn-text">Negotiate <i class="fas fa-comment-dots"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="request-card">
+                            <div class="request-info">
+                                <h4>Light Fixture Installation</h4>
+                                <p class="request-client"><i class="fas fa-user"></i> Anita Desai</p>
+                                <p class="request-address"><i class="fas fa-map-marker-alt"></i> 105 Seaview Heights, Worli, Mumbai</p>
+                                <p class="request-time"><i class="fas fa-clock"></i> May 23, 2:00 PM - 4:00 PM</p>
+                                <p class="request-details"><i class="fas fa-info-circle"></i> Need to install 5 ceiling lights in the living room. All fixtures will be provided.</p>
+                                <p class="request-budget"><i class="fas fa-rupee-sign"></i> Budget: ₹1,200 - ₹1,500</p>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn btn-outline">Decline</button>
+                                <button class="btn-text">Negotiate <i class="fas fa-comment-dots"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="request-card">
+                            <div class="request-info">
+                                <h4>Circuit Board Diagnosis</h4>
+                                <p class="request-client"><i class="fas fa-user"></i> Vikram Malhotra</p>
+                                <p class="request-address"><i class="fas fa-map-marker-alt"></i> 42 Green Park, Andheri West, Mumbai</p>
+                                <p class="request-time"><i class="fas fa-clock"></i> May 25, 11:00 AM - 12:00 PM</p>
+                                <p class="request-details"><i class="fas fa-info-circle"></i> Need to diagnose frequent power trips in the kitchen area. Could be circuit board issue.</p>
+                                <p class="request-budget"><i class="fas fa-rupee-sign"></i> Budget: ₹800 - ₹1,000</p>
+                            </div>
+                            <div class="request-actions">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn btn-outline">Decline</button>
+                                <button class="btn-text">Negotiate <i class="fas fa-comment-dots"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sevak</h3>
+                    <p>Connecting skilled professionals with customers for home services, repairs, and more.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>For Professionals</h4>
+                    <ul>
+                        <li><a href="#">Join as Professional</a></li>
+                        <li><a href="professional-dashboard.html">Professional Dashboard</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Professional Terms</a></li>
+                        <li><a href="#">Earning Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>123 Business Park, Andheri East</p>
+                                <p>Mumbai, Maharashtra 400093</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p>+91 98765 43210</p>
+                                <p>+91 22 2345 6789</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>info@sevak.com</p>
+                                <p>support@sevak.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sevak. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    // Tab navigation functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show corresponding content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+    
+    // Work request acceptance/rejection functionality
+    const acceptButtons = document.querySelectorAll('.request-actions .btn-primary');
+    const declineButtons = document.querySelectorAll('.request-actions .btn-outline');
+    
+    acceptButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const requestCard = this.closest('.request-card');
+            requestCard.style.borderLeft = '4px solid #28a745';
+            requestCard.style.backgroundColor = 'rgba(40, 167, 69, 0.05)';
+            
+            // Disable buttons
+            this.disabled = true;
+            this.textContent = 'Accepted';
+            requestCard.querySelector('.btn-outline').disabled = true;
+            
+            // Show confirmation message
+            const message = document.createElement('p');
+            message.textContent = 'You have accepted this request. The client will be notified.';
+            message.style.color = '#28a745';
+            message.style.marginTop = '0.5rem';
+            message.style.fontWeight = '500';
+            requestCard.querySelector('.request-actions').appendChild(message);
+        });
+    });
+    
+    declineButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const requestCard = this.closest('.request-card');
+            requestCard.style.borderLeft = '4px solid #dc3545';
+            requestCard.style.backgroundColor = 'rgba(220, 53, 69, 0.05)';
+            
+            // Disable buttons
+            this.disabled = true;
+            this.textContent = 'Declined';
+            requestCard.querySelector('.btn-primary').disabled = true;
+            
+            // Show confirmation message
+            const message = document.createElement('p');
+            message.textContent = 'You have declined this request.';
+            message.style.color = '#dc3545';
+            message.style.marginTop = '0.5rem';
+            message.style.fontWeight = '500';
+            requestCard.querySelector('.request-actions').appendChild(message);
+        });
+    });
+    
+    // Availability toggle functionality
+    const availabilityToggles = document.querySelectorAll('.availability-day input[type="checkbox"]');
+    const updateAvailabilityButton = document.querySelector('.availability-settings .btn-primary');
+    
+    updateAvailabilityButton.addEventListener('click', function() {
+        const availabilityData = [];
+        
+        availabilityToggles.forEach(toggle => {
+            const day = toggle.closest('.availability-day').querySelector('span').textContent;
+            const available = toggle.checked;
+            availabilityData.push({ day, available });
+        });
+        
+        // Here you would typically send this data to the server
+        console.log('Availability data to be sent:', availabilityData);
+        
+        // Show success message
+        alert('Your availability has been updated successfully!');
+    });
+    
+    // Calendar navigation
+    const prevWeekButton = document.querySelector('.week-navigator button:first-child');
+    const nextWeekButton = document.querySelector('.week-navigator button:last-child');
+    const weekDisplay = document.querySelector('.week-navigator h4');
+    
+    // This is a simplified example - in a real application, you'd use proper date manipulation
+    prevWeekButton.addEventListener('click', function() {
+        weekDisplay.textContent = 'May 8 - May 14, 2023';
+    });
+    
+    nextWeekButton.addEventListener('click', function() {
+        weekDisplay.textContent = 'May 22 - May 28, 2023';
+    });
+    
+    // Payment filter functionality
+    const paymentFilter = document.querySelector('#payments .filter select');
+    
+    paymentFilter.addEventListener('change', function() {
+        // In a real application, you would filter the payments based on the selected option
+        console.log('Filter payments by:', this.value);
+    });
+    
+    // Booking filter functionality
+    const bookingFilter = document.querySelector('#bookings .filter select');
+    
+    bookingFilter.addEventListener('change', function() {
+        // In a real application, you would filter the bookings based on the selected option
+        console.log('Filter bookings by:', this.value);
+    });
+});
+    </script>
+</body>
+</html>

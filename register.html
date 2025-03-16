@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider App -  Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="register-form" >
+            <h2>Register</h2>
+            <form onsubmit="return validateRegister()">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" required>
+                <label for="register-contact">Contact No:</label>
+                <input type="tel" id="register-contact" required>
+                <label for="user-type">Choose:</label>
+                <select id="user-type" name="choice">
+                    <option value="client" selected>Client</option>
+                    <option value="professional">Professional</option>
+                </select>
+                <label for="professional-specialization">Professional Specialization:</label>
+                <select id="professional-specialization" name="specialization" disabled>
+                    <option value="plumber">Plumber</option>
+                    <option value="househelp">Househelp</option>
+                    <option value="garbage_collector">Garbage Collector</option>
+                    <option value="cleaner">Cleaner</option>
+                    <option value="electrician">Electrician</option>
+                    <option value="painter">Painter</option>
+                    <option value="gardener">Gardener</option>
+                    <option value="laundry">Laundry</option>
+                </select>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" required>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="login.html" onclick="toggleForms('login')">Login here</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+
+
+        document.getElementById('user-type').addEventListener('change', function() {
+            const specializationDropdown = document.getElementById('professional-specialization');
+            if (this.value === 'professional') {
+                specializationDropdown.disabled = false;
+            } else {
+                specializationDropdown.disabled = true;
+                specializationDropdown.selectedIndex = -1; // Reset selection
+            }
+        });
+
+        function validateRegister() {
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+            // Perform additional registration validation here
+            // For demonstration, we'll just return true
+            return true;
+        }
+
+    </script>
+</body>
+</html>

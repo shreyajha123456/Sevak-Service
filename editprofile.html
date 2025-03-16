@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevak - Edit Profile</title>
+    <link rel="stylesheet" href="editprofile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="logo">Sevak</a>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="home.html" class="navbar-item">Home</a></li>
+                <li><a href="#services" class="navbar-item">Services</a></li>
+                <li><a href="#how-it-works" class="navbar-item">How It Works</a></li>
+                <li><a href="#professionals" class="navbar-item">Professionals</a></li>
+                <li><a href="proffessional.html" class="navbar-item">Dashboard</a></li>
+            </ul>
+            <div class="navbar-toggle" id="navbarToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Edit Profile Section -->
+    <section class="edit-profile-section">
+        <div class="container">
+            <div class="edit-profile-header">
+                <h2>Edit Profile</h2>
+                <p>Update your professional information to attract more clients</p>
+            </div>
+
+            <div class="edit-profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-image-container">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="profile-image" id="profileImage">
+                        <div class="profile-image-overlay">
+                            <label for="profileImageUpload" class="profile-image-edit">
+                                <i class="fas fa-camera"></i>
+                            </label>
+                            <input type="file" id="profileImageUpload" accept="image/*" hidden>
+                        </div>
+                    </div>
+                    <div class="profile-navigation">
+                        <a href="#basic-info" class="profile-nav-item active">Basic Information</a>
+                        <a href="#skills-services" class="profile-nav-item">Skills & Services</a>
+                        <a href="#experience" class="profile-nav-item">Experience</a>
+                        <a href="#documents" class="profile-nav-item">Documents</a>
+                        <a href="#settings" class="profile-nav-item">Account Settings</a>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <!-- Basic Information Section -->
+                    <div class="profile-section active" id="basic-info">
+                        <h3 class="section-title">Basic Information</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" value="Rahul Sharma" class="form-control">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+91 98765 43210" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="rahul.sharma@example.com" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" id="dob" value="1990-05-15" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" class="form-control">
+                                        <option value="male" selected>Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Full Address</label>
+                                <textarea id="address" class="form-control" rows="3">123 Main Street, Sector 5, Gurugram, Haryana - 122001</textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" value="Gurugram" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" value="Haryana" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pincode">Pincode</label>
+                                    <input type="text" id="pincode" value="122001" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Professional Bio</label>
+                                <textarea id="bio" class="form-control" rows="4">I am a skilled electrician with over 8 years of experience in residential and commercial electrical work. I specialize in troubleshooting, installations, and electrical repairs with a focus on safety and quality workmanship.</textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" id="saveBasicInfo">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Skills & Services Section -->
+                    <div class="profile-section" id="skills-services">
+                        <h3 class="section-title">Skills & Services</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="mainService">Main Service Category</label>
+                                <select id="mainService" class="form-control">
+                                    <option value="electrician" selected>Electrician</option>
+                                    <option value="plumber">Plumber</option>
+                                    <option value="carpenter">Carpenter</option>
+                                    <option value="painter">Painter</option>
+                                    <option value="cleaning">Cleaning</option>
+                                    <option value="gardener">Gardener</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Skills (Multiple)</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill1" checked>
+                                        <label for="skill1">Electrical Repairs</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill2" checked>
+                                        <label for="skill2">Wiring Installation</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill3" checked>
+                                        <label for="skill3">Circuit Breaker Installation</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill4">
+                                        <label for="skill4">Fan Installation</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill5" checked>
+                                        <label for="skill5">Lighting Installation</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="skill6">
+                                        <label for="skill6">Switchboard Repair</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newSkill">Add New Skill</label>
+                                <div class="input-with-button">
+                                    <input type="text" id="newSkill" class="form-control" placeholder="Enter skill name">
+                                    <button type="button" class="btn btn-outline">Add</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Service Pricing</label>
+                                <div class="service-pricing">
+                                    <div class="pricing-item">
+                                        <div class="pricing-header">
+                                            <span>Electrical Repairs</span>
+                                            <div class="pricing-actions">
+                                                <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <div class="price-form">
+                                                <div class="form-row">
+                                                    <div class="form-group">
+                                                        <label>Starting Price</label>
+                                                        <input type="number" value="300" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Unit</label>
+                                                        <select class="form-control">
+                                                            <option value="fixed" selected>Fixed Price</option>
+                                                            <option value="hourly">Per Hour</option>
+                                                            <option value="daily">Per Day</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-item">
+                                        <div class="pricing-header">
+                                            <span>Wiring Installation</span>
+                                            <div class="pricing-actions">
+                                                <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                                <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="pricing-body">
+                                            <div class="price-form">
+                                                <div class="form-row">
+                                                    <div class="form-group">
+                                                        <label>Starting Price</label>
+                                                        <input type="number" value="500" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Unit</label>
+                                                        <select class="form-control">
+                                                            <option value="fixed">Fixed Price</option>
+                                                            <option value="hourly" selected>Per Hour</option>
+                                                            <option value="daily">Per Day</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline mt-3" id="addNewService">
+                                    <i class="fas fa-plus"></i> Add New Service
+                                </button>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" id="saveSkillsServices">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Experience Section -->
+                    <div class="profile-section" id="experience">
+                        <h3 class="section-title">Work Experience</h3>
+                        <div class="experience-list">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Senior Electrician</h4>
+                                    <div class="experience-actions">
+                                        <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p class="experience-company">ABC Electricals Pvt. Ltd.</p>
+                                <p class="experience-duration">Jun 2018 - Present</p>
+                                <p class="experience-description">Responsible for handling electrical installation and maintenance for residential and commercial properties. Lead a team of 3 junior electricians and manage client relationships.</p>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Electrician</h4>
+                                    <div class="experience-actions">
+                                        <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p class="experience-company">XYZ Electric Solutions</p>
+                                <p class="experience-duration">Mar 2015 - May 2018</p>
+                                <p class="experience-description">Performed electrical repairs, installations, and troubleshooting for residential customers. Specialized in safety inspections and code compliance.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline mt-3" id="addNewExperience">
+                            <i class="fas fa-plus"></i> Add New Experience
+                        </button>
+                        
+                        <h3 class="section-title mt-5">Education & Certification</h3>
+                        <div class="experience-list certification-list">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Diploma in Electrical Engineering</h4>
+                                    <div class="experience-actions">
+                                        <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p class="experience-company">Delhi Technical Institute</p>
+                                <p class="experience-duration">2013 - 2015</p>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Certified Electrician</h4>
+                                    <div class="experience-actions">
+                                        <button type="button" class="btn-text btn-edit"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn-text btn-delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <p class="experience-company">National Skill Development Corporation</p>
+                                <p class="experience-duration">2014</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline mt-3" id="addNewCertification">
+                            <i class="fas fa-plus"></i> Add New Certification
+                        </button>
+                        
+                        <div class="form-actions mt-4">
+                            <button type="button" class="btn btn-primary" id="saveExperience">Save Changes</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Documents Section -->
+                    <div class="profile-section" id="documents">
+                        <h3 class="section-title">Personal Documents</h3>
+                        <p class="section-description">Upload your identity and qualification documents for verification. All documents must be clearly visible.</p>
+                        
+                        <div class="documents-grid">
+                            <div class="document-card">
+                                <div class="document-header">
+                                    <h4>Aadhar Card</h4>
+                                    <span class="badge verified">Verified</span>
+                                </div>
+                                <div class="document-preview">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <div class="document-footer">
+                                    <span class="document-filename">aadhar_card.pdf</span>
+                                    <div class="document-actions">
+                                        <button type="button" class="btn-text"><i class="fas fa-download"></i></button>
+                                        <button type="button" class="btn-text"><i class="fas fa-sync-alt"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="document-card">
+                                <div class="document-header">
+                                    <h4>PAN Card</h4>
+                                    <span class="badge verified">Verified</span>
+                                </div>
+                                <div class="document-preview">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <div class="document-footer">
+                                    <span class="document-filename">pan_card.jpg</span>
+                                    <div class="document-actions">
+                                        <button type="button" class="btn-text"><i class="fas fa-download"></i></button>
+                                        <button type="button" class="btn-text"><i class="fas fa-sync-alt"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="document-card">
+                                <div class="document-header">
+                                    <h4>Electrician Certificate</h4>
+                                    <span class="badge pending">Pending</span>
+                                </div>
+                                <div class="document-preview">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="document-footer">
+                                    <span class="document-filename">certificate.pdf</span>
+                                    <div class="document-actions">
+                                        <button type="button" class="btn-text"><i class="fas fa-download"></i></button>
+                                        <button type="button" class="btn-text"><i class="fas fa-sync-alt"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="document-upload-card">
+                                <label for="documentUpload" class="document-upload-label">
+                                    <div class="upload-icon">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <p>Upload Document</p>
+                                    <span>JPG, PNG or PDF (Max 5MB)</span>
+                                </label>
+                                <input type="file" id="documentUpload" hidden>
+                            </div>
+                        </div>
+                        
+                        <h3 class="section-title mt-5">Work Samples</h3>
+                        <p class="section-description">Upload photos of your previous work to showcase your skills to potential clients.</p>
+                        
+                        <div class="work-samples-grid">
+                            <div class="work-sample">
+                                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Work Sample">
+                                <div class="work-sample-actions">
+                                    <button type="button" class="btn-text"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="work-sample">
+                                <img src="https://images.unsplash.com/photo-1565043589221-2f8b3340f0da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Work Sample">
+                                <div class="work-sample-actions">
+                                    <button type="button" class="btn-text"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="work-sample-upload">
+                                <label for="workSampleUpload" class="work-sample-upload-label">
+                                    <i class="fas fa-plus"></i>
+                                    <p>Add Photo</p>
+                                </label>
+                                <input type="file" id="workSampleUpload" accept="image/*" hidden>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Settings Section -->
+                    <div class="profile-section" id="settings">
+                        <h3 class="section-title">Account Settings</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" class="form-control" placeholder="Enter current password">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" class="form-control" placeholder="Enter new password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm new password">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" id="updatePassword">Update Password</button>
+                            </div>
+                            
+                            <h4 class="settings-subheading">Notification Preferences</h4>
+                            <div class="form-group">
+                                <div class="toggle-item">
+                                    <span>Email Notifications</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>SMS Notifications</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>New Job Alerts</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>Marketing Communications</span>
+                                    <label class="toggle">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <h4 class="settings-subheading">Privacy Settings</h4>
+                            <div class="form-group">
+                                <div class="toggle-item">
+                                    <span>Show my phone number to clients</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-item">
+                                    <span>Show my location on public profile</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" id="saveSettings">Save Settings</button>
+                            </div>
+                            
+                            <div class="danger-zone">
+                                <h4 class="settings-subheading">Danger Zone</h4>
+                                <p>Actions performed here cannot be undone. Please proceed with caution.</p>
+                                <div class="danger-actions">
+                                    <button type="button" class="btn btn-outline" id="deactivateAccount">Deactivate Account</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Sevak</h3>
+                    <p>Connecting skilled professionals with customers in need of services. Find reliable help for all your home and office needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Professionals</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Electrician</a></li>
+                        <li><a href="#">Plumber</a></li>
+                        <li><a href="#">Carpenter</a></li>
+                        <li><a href="#">Cleaning</a></li>
+                        <li><a href="#">More Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>123 Main Street, Delhi, India - 110001</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>+91 98765 43210</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>info@sevak.com</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sevak. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="editprofile.js"></script>
+</body>
+</html>
